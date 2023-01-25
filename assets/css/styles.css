@@ -1,0 +1,64 @@
+:root {
+    /* font-size */
+    --font-orange-amount: 3rem;
+    /* font-weight */
+    --weight-normal: 400;
+    --weight-bold: 700;
+    /* color */
+    --color-soft-red: hsl(10, 79%, 65%);
+    --color-cyan: hsl(186, 34%, 60%);
+    --color-dark-brown: hsl(25, 47%, 15%);
+    --color-medium-brown: hsl(28, 10%, 53%);
+    --color-cream: hsl(27, 66%, 92%);
+    --color-very-pale-orange: hsl(33, 100%, 98%);
+    /* width */
+    --width-orange-container: 100%;
+    /* padding */
+    --padding-container: 2rem;
+    --padding-orange-container: 2.5rem 3rem;
+
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+*{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: var(--color-cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-container);
+}
+
+.orange-container {
+    position: relative;
+    background: var(--color-soft-red);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-orange-container);
+    width: var(--width-orange-container);
+}
+
+.orange-title {
+    color: var(--color-very-pale-orange);
+}
+
+.orange-amount {
+    color: var(--color-very-pale-orange);
+    font-size: var(--font-orange-amount);
+    font-weight: var(--weight-bold);
+}
+
+.orange-icon {
+    position: absolute;
+    right: 2.5rem;
+}
