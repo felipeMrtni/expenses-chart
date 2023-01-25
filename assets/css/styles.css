@@ -1,6 +1,7 @@
 :root {
     /* font-size */
     --font-orange-amount: 3rem;
+    --font-white-chart-title: 2.5rem;
     /* font-weight */
     --weight-normal: 400;
     --weight-bold: 700;
@@ -13,9 +14,12 @@
     --color-very-pale-orange: hsl(33, 100%, 98%);
     /* width */
     --width-orange-container: 100%;
+    --width-chart-item: 100%;
     /* padding */
     --padding-container: 2rem;
     --padding-orange-container: 2.5rem 3rem;
+    --padding-white-container: 2.5rem 3rem;
+    --padding-chart-box: 2rem 0;
 
 }
 
@@ -25,9 +29,11 @@ html {
 
 *{
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
+    font-size: 1.8rem;
     box-sizing: border-box;
 }
+
+/* orange box ---------------------------------- */
 
 .container {
     background: var(--color-cream);
@@ -35,6 +41,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2.5rem;
     padding: var(--padding-container);
 }
 
@@ -61,4 +68,32 @@ html {
 .orange-icon {
     position: absolute;
     right: 2.5rem;
+}
+
+/* white box ----------------------------------- */
+
+.white-container {
+    background: var(--color-very-pale-orange);
+    padding: var(--padding-white-container);
+    border-radius: 1rem;
+}
+
+.chart-box {
+    display: flex;
+    height: 10rem;
+    padding: var(--padding-chart-box);
+}
+
+.chart-title {
+    font-size: var(--font-white-chart-title);
+    font-weight: bold;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    width: var(--width-chart-item);
+    justify-content: flex-end;
+    align-items: center;
+    
 }
