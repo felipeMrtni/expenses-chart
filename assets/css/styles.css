@@ -1,7 +1,12 @@
 :root {
     /* font-size */
+    --font-orange-title: 1.8rem;
     --font-orange-amount: 3rem;
-    --font-white-chart-title: 2.5rem;
+    --font-chart-title: 2.5rem;
+    --font-this-amount: 3rem;
+    --font-this-text: 1.5rem;
+    --font-last-amount: 1.8rem;
+    --font-last-text: 1.5rem;
     /* font-weight */
     --weight-normal: 400;
     --weight-bold: 700;
@@ -14,11 +19,17 @@
     --color-very-pale-orange: hsl(33, 100%, 98%);
     /* width */
     --width-orange-container: 100%;
+    /* --width-orange-container: min(100% - 400px, 840px); */
+    --width-white-container: 100%;
     --width-chart-item: 100%;
+    --width-total: 100%;
+    /* height */
+    --height-container: 100vh;
+    --height-last-month: 0;
     /* padding */
     --padding-container: 2rem;
-    --padding-orange-container: 2.5rem 3rem;
-    --padding-white-container: 2.5rem 3rem;
+    --padding-orange-container: 3rem 2rem;
+    --padding-white-container: 3rem 2rem;
     --padding-chart-box: 2rem 0;
 
 }
@@ -41,6 +52,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: var(--height-container);
     gap: 2.5rem;
     padding: var(--padding-container);
 }
@@ -53,9 +65,11 @@ html {
     flex-direction: column;
     padding: var(--padding-orange-container);
     width: var(--width-orange-container);
+    /* margin-inline: auto; quando usar a width diferente */
 }
 
 .orange-title {
+    font-size: var(--font-orange-title);
     color: var(--color-very-pale-orange);
 }
 
@@ -74,26 +88,66 @@ html {
 
 .white-container {
     background: var(--color-very-pale-orange);
+    width: var(--width-white-container);
     padding: var(--padding-white-container);
     border-radius: 1rem;
-}
-
-.chart-box {
     display: flex;
-    height: 10rem;
-    padding: var(--padding-chart-box);
+    flex-direction: column;
 }
 
 .chart-title {
-    font-size: var(--font-white-chart-title);
+    font-size: var(--font-chart-title);
     font-weight: bold;
 }
 
-.chart-item {
-    display: flex;
-    flex-direction: column;
-    width: var(--width-chart-item);
-    justify-content: flex-end;
-    align-items: center;
+.chart-box {
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 10rem;*/
+    padding: var(--padding-chart-box); 
+    /* width: 100%;
+    height: 100%; */
     
 }
+
+.total-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    width: var(--width-total);
+}
+
+.this-month {
+    gap: 1rem;
+}
+
+.this-text {
+    font-size: var(--font-this-text);
+}
+
+.this-amount {
+    font-size: var(--font-this-amount);
+    font-weight: var(--weight-bold);
+}
+
+.last-month {
+    align-items: flex-end;
+    height: var(--height-last-month);
+    gap: 0.5rem;
+}
+
+.last-amount {
+    font-size: var(--font-last-amount);
+    font-weight: var(--weight-bold);
+}
+
+.last-text {
+    font-size: var(--font-last-text);
+}
+
